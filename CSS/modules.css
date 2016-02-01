@@ -15,6 +15,8 @@
   /*z-index: 0;*/
 }
 
+
+
 .topBanner{
   display: flex;
   flex-direction:row;
@@ -24,7 +26,7 @@
   border-bottom-style: inset;
 /*  border-color: black;*/
   border-width: 5px;
-  height: 10%;
+  height: 5%;
   width: 100%;
 /*  position: fixed;*/
   /*z-index: -1;*/
@@ -65,6 +67,7 @@
 }
 
 .navButton{
+  display: none;
   height: inherit;
   width: inherit;
   background-image: url(../images/darnellbutton.jpg);
@@ -96,9 +99,11 @@
 }
 
 .pageNav{
+  display: flex;
+  margin-top: 9%;
   margin-left: 10px;
   width: 165px;
-  height: 83%;
+  height: 89%;
   /*opacity: .8;*/
   border:solid;
   /*border-width: 2px;*/
@@ -111,6 +116,7 @@
   /*z-index: 1;*/
 
 }
+
 
 .navList{
   display: flex;
@@ -169,9 +175,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  border:solid right: ;
+  margin-top: 10%;
+  /*border:solid right: ;*/
   width: 90%;
-  height:85%;
+  height:90%;
   overflow-y: scroll;
   position:static;
 }
@@ -184,8 +191,8 @@
   border-bottom: solid;
   /*border-radius: 5px;*/
   border-width: 1.5px;
-  height: 45%;
-  margin-top: 2.0%;
+  height: 50%;
+  margin-bottom: 1.5%;
   width: 98%;
   -webkit-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
   -moz-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
@@ -272,9 +279,10 @@
 }
 
 .imageWrapper{
+  padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   width: 95%;
   align-self: center;
@@ -298,6 +306,10 @@
   box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
   border-radius: 10px;
   border: solid 2px rgb(53, 72, 94);
+  /*align-self: center;*/
+}
+.projectCode{
+  /*width: 90%;*/
 }
 
 .flip {
@@ -328,6 +340,9 @@
     /*line-height: 200px;*/
 }
 .flip .card .front {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   position: absolute;
   z-index: 1;
     /*background: black;*/
@@ -335,7 +350,7 @@
     cursor: pointer;
 }
 .flip .card .back {
-  -webkit-transform: rotatey(-180deg);
+  -webkit-transform: rotatey(180deg);
     /*background: blue;*/
     /*background: white;*/
     color: black;
@@ -347,5 +362,87 @@
   border: solid;
   height: 90%;
   width: 95%;
+
+}
+@media screen and (min-width: 650px) {
+  .pageNav{
+    display:block;
+    margin-left: 10px;
+    width: 165px;
+    height: 83%;
+    /*opacity: .8;*/
+    border:solid;
+    /*border-width: 2px;*/
+  /*  position: fixed;*/
+    -webkit-box-shadow:-5px 9px 3px #888888;
+    -moz-box-shadow:-5px 9px 3px #888888;
+    box-shadow:-5px 9px 3px #888888;
+    /*border-bottom-right-radius: 50px;*/
+    background-color: #2E2E2E;
+    /*z-index: 1;*/
+  }
+  .topBanner{
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:flex-end;
+  /*  border-bottom:solid;*/
+    border-bottom-style: inset;
+  /*  border-color: black;*/
+    border-width: 5px;
+    height: 10%;
+    width: 100%;
+  /*  position: fixed;*/
+    /*z-index: -1;*/
+    background-image: url(../images/darnellbanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*opacity: .85;*/
+    border-top-left-radius:10px;
+    box-shadow:-3px 3px 3px #888888;
+    -moz-box-shadow:-3px 3px 3px #888888;
+    -webkit-box-shadow:-3px -3px 3px #888888;
+
+  }
+
+  .bannerNav{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:flex-end;
+  /*  border-left:solid;*/
+  /*  border:solid;*/
+    font-size: 25px;
+    height: 100%;
+    width: 20%;
+    min-width: 300px;
+    list-style-type: none;
+  /*  list-style-position: inside;*/
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: rgba(0,0,0,.6);
+
+
+  }
+
+  .contentWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    border:solid right: ;
+    width: 90%;
+    height:85%;
+    overflow-y: scroll;
+    margin-top: 0;
+    position:static;
+  }
+
+  .navButton{
+    display: block;
+  }
+
 
 }

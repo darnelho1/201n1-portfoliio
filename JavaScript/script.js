@@ -1,4 +1,4 @@
-articleStore = [];
+var articleStore = [];
 
 function BlogCreator(articleProto){
   this.id = articleStore.length + 1;
@@ -15,7 +15,7 @@ function BlogCreator(articleProto){
 
 BlogCreator.prototype.toHTML = function () {
 
-  $contentWrapper = $('.contentWrapper');
+  var $contentWrapper = $('.contentWrapper');
 
   $contentWrapper.append("<div class='blogArticle'> <div class='blogHeader'> <h1>" + this.title + "</h1> <time class=blogPublishedDate datetime='"+ this.date +"'> about " + this.daysAgo + " days ago.</time> </div> <div class= 'blogBody'>" + this.body + "</div> <div class='blogArticleFooter'> READ ON...... </div> </div>");
 };
@@ -25,9 +25,14 @@ articleProtos.forEach(function(article){
   blog = new BlogCreator(article);
 });
 
+articleStore.sort(function(a,b){
+  return a.daysAgo - b.daysAgo;
+});
+
 articleStore.forEach(function(article){
   article.toHTML();
 });
+
 
 $(document).ready(function() {
 
@@ -92,16 +97,6 @@ $(document).ready(function() {
         });
   });
 
-
-    // $(this).parent().toggleClass('blogArticleGrowA');
-
-    // $(this).parent().parent().scrollTop(0);
-
-
-
-  // $('.navList li').click(function(){
-  //   console.log($(this).text());
-  // });
 
   cleanpage = function(){
     $(document).ready(function() {
