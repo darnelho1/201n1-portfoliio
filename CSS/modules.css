@@ -20,7 +20,7 @@
 .topBanner{
   display: flex;
   flex-direction:row;
-  justify-content:flex-end;
+  justify-content:space-between;
   align-items:flex-end;
 /*  border-bottom:solid;*/
   border-bottom-style: inset;
@@ -47,11 +47,11 @@
   justify-content:space-around;
   align-items:flex-end;
 /*  border-left:solid;*/
-/*  border:solid;*/
-  font-size: 25px;
+  /*border:solid red;*/
+  font-size: .5em;
   height: 100%;
-  width: 20%;
-  min-width: 300px;
+  width: 10%;
+  min-width: 150px;
   list-style-type: none;
 /*  list-style-position: inside;*/
   padding: 0;
@@ -60,6 +60,10 @@
   background-color: rgba(0,0,0,.6);
 
 
+}
+
+.bannerNav > li{
+  /*border: solid red;*/
 }
 
 .buttonWrapper{
@@ -99,8 +103,8 @@
 }
 
 .pageNav{
-  display: flex;
-  margin-top: 9%;
+  display: block;
+  margin-top: 15%;
   margin-left: 10px;
   width: 165px;
   height: 89%;
@@ -134,6 +138,7 @@
 
 .navList li{
   border-bottom:solid;
+
 /*  z-index: -1;*/
 
 }
@@ -175,7 +180,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 10%;
+  margin-top: 15%;
   /*border:solid right: ;*/
   width: 90%;
   height:90%;
@@ -191,8 +196,8 @@
   border-bottom: solid;
   /*border-radius: 5px;*/
   border-width: 1.5px;
-  height: 50%;
-  margin-bottom: 1.5%;
+  height: 100%;
+  margin-bottom: 3.5%;
   width: 98%;
   -webkit-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
   -moz-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
@@ -222,7 +227,7 @@
   margin: 0;
   width: 15%;
   align-self: flex-end;
-  font-size: 15px;
+  font-size: .7em;
   font-weight: bold;
   color: white;
   background-color: rgba(0, 0, 20, 0.35);
@@ -234,11 +239,11 @@
 }
 .blogHeader h1{
   padding-left: 20px;
-  font-size: 25px;
+  font-size: 1.5em;
   /*padding: 0;*/
   margin: 0;
   /*border: solid;*/
-  width: 20%;
+  width: 60%;
 
 }
 
@@ -249,12 +254,13 @@
   /*align-items: center;*/
   /*flex-wrap: wrap;*/
   text-align: left;
-  height: 100%;
+  height: auto;
+  width: auto;
   overflow-y: hidden;
   /*overflow-y: scroll;
   overflow-x: hidden;*/
   padding: 1em;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   font-size: 20px;
 }
 
@@ -282,11 +288,12 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  width: 95%;
+  width: 85%;
+  min-height:100px;
   align-self: center;
-  /*border: solid;*/
+  /*border: solid red;*/
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -297,8 +304,8 @@
 }
 
 .projectSS{
-  height: 400px;
-  width: 700px;
+  height: 40%;
+  width: 45%;
   /*flex-grow: 2;*/
   /*align-self: center;*/
   -webkit-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
@@ -307,6 +314,7 @@
   border-radius: 10px;
   border: solid 2px rgb(53, 72, 94);
   /*align-self: center;*/
+  /*border: solid red;*/
 }
 .projectCode{
   /*width: 90%;*/
@@ -364,10 +372,21 @@
   width: 95%;
 
 }
+
+.projectCode{
+  -webkit-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
+  -moz-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
+  box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
+  border-radius: 10px;
+  border: solid 2px rgb(53, 72, 94);
+
+}
+
 @media screen and (min-width: 650px) {
   .pageNav{
     display:block;
     margin-left: 10px;
+    margin-top: 0;
     width: 165px;
     height: 83%;
     /*opacity: .8;*/
@@ -443,6 +462,26 @@
   .navButton{
     display: block;
   }
+
+  .blogArticle{
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    border-top: solid;
+    border-bottom: solid;
+    /*border-radius: 5px;*/
+    border-width: 1.5px;
+    height: 50%;
+    margin-bottom: 3.5%;
+    width: 98%;
+    -webkit-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
+    -moz-box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
+    box-shadow: -17px 23px 5px -7px rgba(0,0,0,0.35);
+    /*overflow: scroll;*/
+    position: relative;
+  }
+
+
 
 
 }
