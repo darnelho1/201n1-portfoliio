@@ -9,7 +9,7 @@
   background-color: rgba(0,0,0,.6);
   border-top: solid;
   border-top-width: 5px;
-  border-top-color: white;
+  border-top-color: rgba(238, 13, 13, 0.88);
 /*  border-top-left-radius:10px;*/
   /*padding-bottom: 0px;
   padding-top: 0px;
@@ -32,6 +32,7 @@
 @media screen and (min-width: 650px){
   #pageTitle{
     font-size: 2em;
+    border-top: solid white;
   }
 
 

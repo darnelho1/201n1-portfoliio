@@ -104,9 +104,7 @@ $(document).ready(function() {
 
     $(this).children().show();
 
-        $(this).parent().css({
-          'overflow-y': 'scroll',
-        });
+    $(this).parent().css({'overflow-y': 'scroll',});
   });
 
 
@@ -174,15 +172,38 @@ $(document).ready(function() {
   });
 
 
-  ($(window).width()<650)? $('.blogArticle').off():
+  ($(window).width()<650)? function(){
+    $('.blogArticle').off()
+    moblieReady();
+
+    $('.blogHeader').click(function() {
+      $(this).parent().animate({
+        height: "100%",
+        "margin-top": "2.0%"
+      },800);
+
+      $(this).siblings('.blogBody').css({
+        'overflow':'hidden',
+      });
+
+      $(this).siblings('.blogArticleFooter').show();
+
+      $(this).parent().parent('.contentWrapper').css({
+            'overflow-y': 'scroll',
+          });
+    });
+  }():function(){
    $('blogArticle').on();
+   $('#pageTitle').off();
+ }();
 
-   ($(window).width()<650)? moblieReady(): $('#pageTitle').off();
 
-   $(window).resize(function() {
+  // ($(window).width()<650)? :
+
+  $(window).resize(function() {
      console.log($(window).width());
      ($(window).width()>650)? $('#pageTitle').off(): moblieReady();
-   });
+  });
 
   // console.log($(window).width());
 });
