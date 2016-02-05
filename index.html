@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="./Vendor/jquery-ui.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./CSS/base.css" media="screen" title="no title" charset="utf-8">
   </head>
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="blogArticle">
+      <div class="blogHeader">
+        <h1>{{title}}</h1>
+        <time class="blogPublishedDate" datetime={{date}}></time>About {{daysAgo}} Days Ago
+      </div>
+      <div class="blogBody">
+        {{{body}}}
+      </div>
+      <div class="blogArticleFooter">
+        READ ON......
+      </div>
+    </div>
+  </script>
 
   <body class="wrapper">
     <header class="topBanner">
@@ -72,6 +86,7 @@
 
   </footer>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   <script type="text/javascript" src="Vendor/jquery-ui.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js">
   </script>
