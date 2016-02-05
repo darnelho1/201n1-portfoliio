@@ -16,11 +16,16 @@ function BlogCreator(articleProto){
 
 }
 
-// var toHTML = function () {
-//   $('.contentWrapper').append(this);
+// BlogCreator.prototype.toHTML = function () {
+//
+//   var $contentWrapper = $('.contentWrapper');
+//
+//   $contentWrapper.append("<div class='blogArticle'> <div class='blogHeader'> <h1>" + this.title + "</h1> <time class=blogPublishedDate datetime='"+ this.date +"'> about " + this.daysAgo + " days ago.</time> </div> <div class= 'blogBody'>" + this.body + "</div> <div class='blogArticleFooter'> READ ON...... </div> </div>");
 // };
 
 var template = Handlebars.compile($("#entry-template").html());
+
+
 
 articleProtos.forEach(function(article){
   blog = new BlogCreator(article);
