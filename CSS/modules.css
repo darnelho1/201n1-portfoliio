@@ -58,7 +58,7 @@
   -webkit-align-items:flex-end;
 /*  border-left:solid;*/
   /*border:solid red;*/
-  font-size: .5em;
+  font-size: .7em;
   height: 100%;
   width: 10%;
   min-width: 150px;
@@ -251,11 +251,11 @@
 
 }
 
-.BlogPublishedDate{
+.blogPublishedDate{
   margin: 0;
   width: 15%;
   align-self: flex-end;
-  font-size: .7em;
+  font-size: .75em;
   font-weight: bold;
   color: white;
   background-color: rgba(0, 0, 20, 0.35);
@@ -265,6 +265,7 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+
 .blogHeader h1{
   padding-left: 20px;
   font-size: 1.5em;
@@ -311,9 +312,7 @@
 
 }
 
-.BlogPublishedDate{
 
-}
 
 .imageWrapper{
   padding: 0;
