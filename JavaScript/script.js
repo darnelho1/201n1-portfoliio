@@ -16,12 +16,15 @@ function BlogCreator(articleProto){
 
 }
 
-BlogCreator.prototype.toHTML = function () {
+// BlogCreator.prototype.toHTML = function () {
+//
+//   var $contentWrapper = $('.contentWrapper');
+//
+//   $contentWrapper.append("<div class='blogArticle'> <div class='blogHeader'> <h1>" + this.title + "</h1> <time class=blogPublishedDate datetime='"+ this.date +"'> about " + this.daysAgo + " days ago.</time> </div> <div class= 'blogBody'>" + this.body + "</div> <div class='blogArticleFooter'> READ ON...... </div> </div>");
+// };
 
-  var $contentWrapper = $('.contentWrapper');
+var template = Handlebars.compile($("#entry-template").html());
 
-  $contentWrapper.append("<div class='blogArticle'> <div class='blogHeader'> <h1>" + this.title + "</h1> <time class=blogPublishedDate datetime='"+ this.date +"'> about " + this.daysAgo + " days ago.</time> </div> <div class= 'blogBody'>" + this.body + "</div> <div class='blogArticleFooter'> READ ON...... </div> </div>");
-};
 
 
 articleProtos.forEach(function(article){
@@ -33,7 +36,12 @@ articleStore.sort(function(a,b){
 });
 
 articleStore.forEach(function(article){
-  article.toHTML();
+  // article.toHTML();
+  var x = template(article);
+  $('.contentWrapper').append(x);
+  console.log(x);
+
+  // x.toHTML();
 });
 
 moblieReady=function(){
@@ -51,13 +59,13 @@ $(document).ready(function() {
     // console.log('Footer Click');
 
     $(this).parent().animate({
-        "height": "92%",
+        "height": "99%",
         // "margin-top": "3.5%"
       },2000);
 
     $('.navButton').animate({
-      'margin-top': '-75px',
-      'margin-bottom': '25px'
+      'margin-top': '-110px',
+      'margin-bottom': '65px'
     },1000);
 
     $('.pageNav').delay(500).slideUp('slow');
@@ -90,7 +98,7 @@ $(document).ready(function() {
     $('.pageNav').slideDown(500);
     $(this).animate({
       height: "50%",
-      "margin-top": "2.0%"
+      "margin-bottom": "1.5%"
     },1000);
 
     $('.navButton').animate({
@@ -179,7 +187,7 @@ $(document).ready(function() {
     $('.blogHeader').click(function() {
       $(this).parent().animate({
         height: "100%",
-        "margin-top": "2.0%"
+        // "margin-top": "2.0%"
       },800);
 
       $(this).siblings('.blogBody').css({
